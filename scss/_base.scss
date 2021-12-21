@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  border-radius: 300px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border: 4px solid $main-pink;
+  text-transform: uppercase;
+}
+
+.nav-btn {
+  border: 2px solid #4a4a4a;
+  padding: 0.9rem 3rem;
+}
+
+.hero-btn,
+.how-btn {
+  background: white;
+}
+.hero-btn {
+  padding-right: 3.9rem;
+  padding-left: 3.9rem;
+}
+
+.how-btn {
+  padding-right: 3.6rem;
+  padding-left: 3.6rem;
+}
+.pricing-btn,
+.social-btn {
+  color: white;
+  background: $main-pink;
+}
+.pricing-btn {
+  padding-right: 1.9rem;
+  padding-left: 1.9rem;
+}
+.social-btn {
+  padding-right: 3.2rem;
+  padding-left: 3.2rem;
+}
