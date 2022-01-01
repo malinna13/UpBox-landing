@@ -1,0 +1,351 @@
+@import "variables";
+
+@import "base";
+@import "typography";
+
+//HEADER
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.image {
+  background: white;
+  font-size: 0;
+}
+.image img {
+  width: 100%;
+}
+.main-navbar {
+  padding: 1.6rem 11.1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+.main-navbar ul {
+  display: flex;
+  align-items: center;
+
+  gap: 4.05rem;
+}
+.main-navbar a {
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.main-navbar .logo a {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.main-navbar img {
+  width: 5.6rem;
+  height: 5.6rem;
+  display: inline-block;
+}
+
+// HERO SECTION
+
+#hero {
+  background: $bg-blue;
+  height: 545px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-header {
+  text-align: start;
+}
+.hero-img {
+  //width: 109.2rem;
+  width: 65%;
+  // height: 75.6rem;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  z-index: 1;
+}
+.hero-marker {
+  // width: 27.6rem;
+  width: 15%;
+  //height: 39.8rem;
+  position: absolute;
+  top: 66.5px;
+  right: 5.5%;
+  z-index: 0;
+}
+.hero-text {
+  height: 100%;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 111px;
+  align-items: baseline;
+}
+.hero-subheader {
+  margin-top: 1.9rem;
+  margin-bottom: 3rem;
+}
+
+//PRICING
+
+#pricing {
+  padding-top: 7.1rem;
+}
+.pricing-hr {
+  background: url("../img/underline.png") no-repeat top center;
+  height: 17px;
+  display: block;
+  border: 0;
+}
+.pricing-plans {
+  display: flex;
+  gap: 12rem;
+  justify-content: center;
+  padding-top: 4.5rem;
+}
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 575px;
+  height: 291px;
+  align-items: center;
+  border: 4px solid #c4c4c450;
+}
+.pricing-plan:first-child {
+  background: url("../img/Mask_Group.png");
+}
+.pricing-plan:last-child {
+  background: url("../img/Mask_Group2.png");
+}
+.pricing-btn {
+  margin-top: 2rem;
+}
+.pricing-text {
+  text-align: center;
+  padding-top: 4.3rem;
+  padding-bottom: 6rem;
+}
+
+//HOW
+.how-hr {
+  background: url("../img/underline2.png") no-repeat top center;
+  height: 17px;
+  display: block;
+  border: 0;
+}
+.how-step-1 {
+  display: flex;
+  width: 858px;
+  margin-left: 12.1rem;
+  margin-top: 7rem;
+}
+.how-step-1-image {
+  position: relative;
+  width: 411px;
+  height: 405px;
+}
+.how-step-1-number {
+  position: absolute;
+  z-index: 2;
+  top: 101px;
+  left: 114px;
+}
+.how-step-1-photo {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 88px;
+}
+.how-step-1-marker {
+  position: absolute;
+}
+.how-step-1-text {
+  width: 440px;
+  padding-left: 4rem;
+  padding-top: 6.5rem;
+}
+.how-step-1-text h2 {
+  text-align: start;
+  margin-bottom: 2rem;
+}
+
+.how-step-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.4rem;
+  margin-right: 16rem;
+  margin-left: auto;
+  width: 590px;
+}
+.how-step-2-image {
+  position: relative;
+  height: 375px;
+}
+.how-step-2-number {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+}
+.how-step-2-photo {
+  position: absolute;
+  top: 8.5rem;
+  left: 6.8rem;
+  z-index: 2;
+}
+.how-step-2-marker {
+  position: absolute;
+  z-index: 1;
+  top: 12.7rem;
+}
+.how-step-2-vector {
+  position: absolute;
+  top: 1.6rem;
+  right: 0;
+}
+.how-step-2-text {
+  padding-left: 14.7rem;
+}
+h2.how-step-2-header {
+  padding-top: 1rem;
+  text-align: start;
+  margin-bottom: 2rem;
+}
+
+.how-step-3 {
+  display: flex;
+  margin-top: 7rem;
+  margin-left: 21rem;
+  width: 828px;
+}
+.how-step-3-image {
+  position: relative;
+  height: 415px;
+  width: 370px;
+}
+.how-step-3-number {
+  position: absolute;
+  top: 9.4rem;
+  z-index: 2;
+}
+.how-step-3-photo {
+  position: absolute;
+  z-index: 1;
+}
+.how-step-3-marker {
+  position: absolute;
+  bottom: 0;
+  left: 20.9rem;
+}
+.how-step-3-text {
+  width: 460px;
+  padding-top: 8.3rem;
+}
+h2.how-step-3-header {
+  text-align: start;
+  margin-bottom: 2rem;
+}
+.btn-wrap {
+  margin: 0 auto;
+  margin-top: 12rem;
+  margin-bottom: 9.4rem;
+  width: fit-content;
+}
+
+//SOCIAL
+#social {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  background: $bg-blue;
+  padding-bottom: 12.4rem;
+}
+.social-header {
+  padding-top: 10rem;
+}
+.social-posts {
+  display: flex;
+  gap: 3.4rem;
+  padding-top: 6rem;
+}
+.social-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.social-img {
+  width: 100%;
+}
+.social-text {
+  padding-top: 3.1rem;
+}
+#social .btn-wrap {
+  margin-bottom: 0;
+}
+
+//FOOTER
+footer {
+  margin: 3rem;
+  border: 2px solid $border;
+  background: $bg-grey;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8rem;
+    padding-right: 8.5rem;
+    padding-top: 4.4rem;
+    padding-bottom: 6.1rem;
+
+    .logo a {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    img {
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+    }
+    nav {
+      ul {
+        display: flex;
+        gap: 3.1rem;
+
+        img {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 4.6rem;
+    justify-content: space-between;
+
+    h4 {
+      padding-bottom: 2.2rem;
+    }
+
+    li {
+      padding-bottom: 1.5rem;
+    }
+  }
+  .navbar-credits {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 8rem;
+    border-top: 2px solid $border;
+  }
+}
