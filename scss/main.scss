@@ -2,9 +2,9 @@
 
 @import "base";
 @import "typography";
+@import "media";
 
 //HEADER
-
 header {
   position: sticky;
   top: 0;
@@ -18,7 +18,7 @@ header {
   width: 100%;
 }
 .main-navbar {
-  padding: 1.6rem 11.1rem;
+  padding: 1.6rem 8%;
   width: 100%;
   height: 100%;
   display: flex;
@@ -35,6 +35,10 @@ header {
 .main-navbar a {
   text-transform: uppercase;
   white-space: nowrap;
+  transition: all 0.3s;
+}
+.main-nav a:hover {
+  color: #777;
 }
 .main-navbar .logo a {
   display: flex;
@@ -45,6 +49,20 @@ header {
   width: 5.6rem;
   height: 5.6rem;
   display: inline-block;
+}
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 // HERO SECTION
@@ -89,6 +107,11 @@ header {
   margin-top: 1.9rem;
   margin-bottom: 3rem;
 }
+#hero a:hover,
+#how a:hover,
+footer a:hover {
+  color: #777;
+}
 
 //PRICING
 
@@ -103,27 +126,39 @@ header {
 }
 .pricing-plans {
   display: flex;
-  gap: 12rem;
-  justify-content: center;
+  justify-content: space-around;
   padding-top: 4.5rem;
 }
 .pricing-plan {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 575px;
-  height: 291px;
+  width: 40%;
   align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   border: 4px solid #c4c4c450;
 }
 .pricing-plan:first-child {
-  background: url("../img/Mask_Group.png");
+  background: url("../img/Mask_Group.png") center no-repeat;
+  background-size: cover;
 }
 .pricing-plan:last-child {
-  background: url("../img/Mask_Group2.png");
+  background: url("../img/Mask_Group2.png") center no-repeat;
+  background-size: cover;
 }
 .pricing-btn {
   margin-top: 2rem;
+}
+.pricing-btn:hover,
+.social-btn:hover {
+  background: #f198a8;
+}
+.btn:hover {
+  border: 4px solid #f198a8;
+}
+.nav-btn:hover {
+  border: 2px solid #777;
 }
 .pricing-text {
   text-align: center;
@@ -219,7 +254,8 @@ h2.how-step-2-header {
 .how-step-3 {
   display: flex;
   margin-top: 7rem;
-  margin-left: 21rem;
+  margin-left: auto;
+  margin-right: auto;
   width: 828px;
 }
 .how-step-3-image {
@@ -267,7 +303,8 @@ h2.how-step-3-header {
   padding-top: 10rem;
 }
 .social-posts {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 3.4rem;
   padding-top: 6rem;
 }
@@ -328,7 +365,8 @@ footer {
   }
 
   .links {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding-left: 8rem;
     padding-right: 8rem;
     padding-bottom: 4.6rem;
@@ -343,9 +381,307 @@ footer {
     }
   }
   .navbar-credits {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
     justify-content: space-between;
     padding: 3rem 8rem;
     border-top: 2px solid $border;
+
+    .credits-links a:last-child {
+      margin-left: 3.6rem;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .main-navbar img {
+    width: 3.7rem;
+    height: 3.7rem;
+  }
+  p.logo-text {
+    font-size: 2rem;
+  }
+  .main-navbar a {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+  #hero {
+    height: 550px;
+  }
+
+  .hero-text {
+    height: 100%;
+    width: 364px;
+
+    justify-content: flex-start;
+    margin-left: 4rem;
+  }
+  .hero-header {
+    padding-top: 1.8rem;
+    font-size: 4.2rem;
+  }
+
+  .btn {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+  .how-step-1 {
+    margin-left: 6rem;
+  }
+  .how-step-2 {
+    margin-right: 5%;
+  }
+  .hero-img {
+    width: 100%;
+    top: 65px;
+    left: 15%;
+  }
+  .hero-marker {
+    display: none;
+  }
+  p.social-text {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .main-navbar ul {
+    gap: 3rem;
+  }
+  .how-step-1 {
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 100%;
+  }
+  .how-step-1-image {
+    width: 320px;
+    transform: scale(0.7) translate(-2rem, -2rem);
+  }
+  .how-step-2-image {
+    height: 300px;
+    transform: scale(0.7);
+  }
+  .how-step-3 {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .how-step-3-image {
+    width: 300px;
+    transform: scale(0.7) translate(-2rem, -4rem);
+  }
+  .how-step-2-number {
+    bottom: -80px;
+    left: -40px;
+  }
+  .btn-wrap {
+    margin-top: 0;
+  }
+  #social .btn-wrap {
+    margin-top: 12rem;
+  }
+  .social-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    row-gap: 2.4rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .main-navbar {
+    padding: 1.6rem 4%;
+  }
+  .hero-img {
+    width: 100%;
+    top: 120px;
+    left: 15%;
+  }
+  p.hero-subheader {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  footer .navbar-credits {
+    grid-template-columns: repeat(2, auto);
+    align-items: flex-start;
+  }
+  .credits {
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  // .main-navbar nav {
+  //   display: none;
+  // }
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+  }
+  .main-nav {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  #hero {
+    height: 700px;
+  }
+  .hero-text {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .hero-img {
+    position: static;
+  }
+  .hero-header {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+  p.hero-subheader {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+  .pricing-plans {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.9rem;
+  }
+  .pricing-plan {
+    width: 90%;
+  }
+  p.pricing-text {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .how-step-1 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .how-step-1-image {
+    width: 323px;
+    height: 390px;
+    transform: none;
+  }
+  .how-step-1-photo {
+    right: auto;
+    left: auto;
+  }
+  .how-step-1-marker {
+    left: -3rem;
+  }
+  .how-step-1-number {
+    left: 24px;
+  }
+  .how-step-1-text {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .how-step-2 {
+    width: 100%;
+  }
+  .how-step-2-number {
+    transform: scale(1.3);
+  }
+  .how-step-2-text {
+    padding-left: 12rem;
+    padding-right: 3rem;
+  }
+  .how-step-3 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+  }
+  .how-step-3-image {
+    transform: none;
+  }
+
+  .how-step-3-text {
+    width: 100%;
+    padding-top: 6.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  #how .btn-wrap {
+    margin-top: 10rem;
+  }
+  #social {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .social-posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .social-btn {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+  }
+  footer .links {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 3rem;
+    row-gap: 2.4rem;
+  }
+  footer .links a,
+  footer h4,
+  .navbar-credits {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  footer nav {
+    display: none;
+  }
+  footer .navbar {
+    padding-left: 3rem;
+  }
+  footer .navbar-credits {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }

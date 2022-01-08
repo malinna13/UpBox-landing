@@ -11,19 +11,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <script defer src="script.js"></script>
     <title>UpBox</title>
   </head>
   <body>
-    <header>
+    <header >
         <div class="image"><img src="img/topbar.png" alt="topbar"></div>
-      <div class="main-navbar">
+      <div class="main-navbar header">
         <div class="logo">
           <a href="#"
             ><img src="img/Logo.svg" alt="Logo" />
             <p class="logo-text">UpBox</p></a
           >
         </div>
-        <nav>
+        <nav class="main-nav">
           <ul>
             <li><a href="#">this month</a></li>
             <li><a href="#">skin</a></li>
@@ -33,6 +34,10 @@
             <li><a href="#" class="btn nav-btn">log in &gt;</a></li>
           </ul>
         </nav>
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
       </div>
     </header>
     <section id="hero">
@@ -46,7 +51,7 @@
         <a href="#" class="btn hero-btn">sign up &gt;</a>
       </div>
         <img src="img/BOX.png" class="hero-img" alt="box" />
-        <img src="img/Marker.png" class="hero-marker"alt="" />
+        <img src="img/Marker.png" class="hero-marker"alt="box-marker" />
     </section>
     <section id="pricing">
       <h1 class="pricing-header">Pick your plan</h1>
@@ -247,9 +252,17 @@
       </div>
       <div class="navbar-credits">
           <p class="credits">© 2020 Quest AI. Upbox is a Sample Project and open source design project free for personal and commercial use.</p>
-          <a href="#">Terms</a>
-          <a href="#">Privacy Policy</a>
+         <div class="credits-links"> <a href="#">Terms</a>
+          <a href="#">Privacy Policy</a></div>
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
